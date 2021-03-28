@@ -112,7 +112,7 @@
           template(v-slot:body-cell-trade_price="props")
             q-td(:props="props")
               div
-                p.q-mb-none.q-mt-xs {{ `${(props.row.trade_price * btc.trade_price).toLocaleString()} 원` }}
+                p.q-mb-none.q-mt-xs {{ `${Math.floor(props.row.trade_price * btc.trade_price).toLocaleString()} 원` }}
               div.my-table-details
                 p.q-mb-xs
           template(v-slot:body-cell-prev_closing_price="props")
